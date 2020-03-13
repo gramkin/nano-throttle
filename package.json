@@ -1,6 +1,6 @@
 {
   "name": "nano-throttle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minimal throttle function implementation",
   "main": "index.js",
   "scripts": {

@@ -1,17 +1,16 @@
 module.exports = function (callback, ms, trailing) {
-  var wait, call;
+  var t = 0, call;
   arguments.length < 3 && (trailing = true);
   return function () {
     var args = arguments;
     call = function () {
       callback.apply(undefined, args);
-      wait = true;
+      t = new Date().getTime() + ms;
       call = null;
-      setTimeout(function () {
-        wait = false;
-        if (call && trailing) call();
+      trailing && setTimeout(function () {
+        call && call();
       }, ms);
     };
-    if (!wait) call();
+    if (new Date().getTime() > t) call();
   }
 };
