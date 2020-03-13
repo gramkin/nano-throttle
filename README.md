@@ -17,7 +17,7 @@ npm install nano-throttle --save
 ```js
 import throttle from 'nano-throttle';
 
-throttle(milliseconds, callback);
-throttle(milliseconds, callback, false); // without trailing call
+throttle(callback, ms);
+throttle(callback, ms, false); // without trailing call
 
 ```
