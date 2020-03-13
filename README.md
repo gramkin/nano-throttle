@@ -1,19 +1,23 @@
-# throttle-debounce
+# nano-throttle
 
-Minimal Throttle function.
+Minimal throttle function with trailing call support. 
+87 bytes (minified and gzipped)
+[Size Limit] controls the size
+
+[Size Limit]:   https://github.com/ai/size-limit
 
 ## Install
 
 ```sh
-npm install tiny-throttle --save
+npm install nano-throttle --save
 ```
 
 ## Usage
 
 ```js
-import throttle from 'tiny-throttle';
+import throttle from 'nano-throttle';
 
-throttle(200, callback);
-throttle(200, callback, false); // without trailing call
+throttle(milliseconds, callback);
+throttle(milliseconds, callback, false); // without trailing call
 
 ```
