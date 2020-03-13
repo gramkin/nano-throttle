@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = function (callback, ms, trailing) {
   var wait, call;
   arguments.length < 3 && (trailing = true);
