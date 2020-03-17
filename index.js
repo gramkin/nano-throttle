@@ -3,8 +3,9 @@ module.exports = function (callback, ms, trailing) {
   arguments.length < 3 && (trailing = true);
   return function () {
     var args = arguments;
+    var self = this;
     call = function () {
-      callback.apply(undefined, args);
+      callback.apply(self, args);
       t = new Date().getTime() + ms;
       call = null;
       trailing && setTimeout(function () {
