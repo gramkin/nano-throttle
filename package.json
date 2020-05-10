@@ -1,6 +1,6 @@
 {
   "name": "nano-throttle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Minimal throttle function implementation",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
   ],
   "author": "Grigory Ivanov <bakluzhino@gmail.com>",
   "license": "ISC",
+  "repository": "gramkin/nano-throttle",
   "devDependencies": {
     "@size-limit/preset-small-lib": "^4.3.1",
     "@types/jest": "^25.1.4",
